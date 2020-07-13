@@ -21,11 +21,14 @@ app.get('/', (request, response) => {
   })
 //End points
 
-app.get('/countries', db.getCountries)
-app.get('/countries/:id', db.getCountryById)
-app.post('/countries', db.createCountry)
-app.put('/countries/:id', db.updateCountry)
-app.delete('/countries/:id', db.deleteCountry)//GET
+app.get('/users', db.getUsers)
+app.get('/user/:id', db.getUserById)
+app.post('/user', db.createUser)
+app.put('/user/:id', db.updateUser)
+app.delete('/user/:id', db.deleteUser)
+
+
+//GET
 //Direct / to /movies when user go web
 // app.get('/', (req, res) => {
 //     return res.redirect('/movies')
