@@ -3,7 +3,6 @@ let bodyParser = require('body-parser');
 let app = express();
 let movieRouter = require('./Routes/movieRouter');
 const db = require('./myapi/queries');
-const port = 5000 ;
 
 //apply middleware by use app.use()
 app.use(
@@ -36,4 +35,4 @@ app.delete('/user/:id', db.deleteUser)
 
 // app.use('/movies',movieRouter);
  
-app.listen(port, () => { })
+app.listen(process.env.PORT || 5000, () => { })
